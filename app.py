@@ -91,7 +91,6 @@ feature = st.sidebar.radio("Select Feature", [
     
 ])
 
-# ---------------- HOME ----------------
 if feature == "Home":
 
     st.markdown("""
@@ -150,7 +149,6 @@ if feature == "Home":
 
     </div>
     """, unsafe_allow_html=True)
-# ---------------- CROP ----------------
 elif feature == "Crop Recommendation":
 
     st.subheader("Enter Soil Data")
@@ -186,7 +184,7 @@ elif feature == "Crop Recommendation":
         with col3:
             st.markdown(f"<div class='card'>🥉<br>{crops[top3[2]]}<br>{round(probs[top3[2]]*100,2)}%</div>", unsafe_allow_html=True)
 
-# ---------------- FERTILIZER ----------------
+
 elif feature == "Fertilizer Suggestion":
 
     N = st.number_input("Nitrogen", 0.0)
@@ -204,7 +202,7 @@ elif feature == "Fertilizer Suggestion":
         else:
             st.success("Soil balanced")
 
-# ---------------- PROFIT ----------------
+
 elif feature == "Profit Prediction":
 
     price = st.number_input("Price", 0.0)
@@ -214,7 +212,7 @@ elif feature == "Profit Prediction":
     if st.button("Calculate"):
         st.success(f"Profit: ₹{(price*yield_amt)-cost}")
 
-# ---------------- DISEASE ----------------
+
 elif feature == "Disease Prediction":
 
     uploaded = st.file_uploader("Upload Leaf Image")
