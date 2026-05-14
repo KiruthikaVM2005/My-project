@@ -9,7 +9,7 @@ model = joblib.load("crop_model.pkl")
 
 st.set_page_config(page_title="Smart Agriculture AI", layout="wide")
 
-# ---------------- THEME TOGGLE ----------------
+
 theme = st.sidebar.toggle("🌙 Dark Mode")
 
 if theme:
@@ -81,14 +81,14 @@ else:
     """, unsafe_allow_html=True)
 
 
-# ---------------- SIDEBAR ----------------
+
 feature = st.sidebar.radio("Select Feature", [
     "Home",
     "Crop Recommendation",
     "Fertilizer Suggestion",
     "Profit Prediction",
     "Disease Prediction",
-    "AI Chatbot"
+    
 ])
 
 # ---------------- HOME ----------------
